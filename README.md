@@ -1,5 +1,5 @@
-# Projeto Java/Maven - Algoritmos Busca Em Grafos - IFMA - Instituto Federal do Maranhão.
-  Projeto em Java voltado a atender o desafio de uma atividade acadêmica, para implementação dos algoritmos de busca envolvendo grafos referente à disciplina de Inteligência Artificial (IA) do IFMA - Instituto Federal do Maranhão - Campus Monte Castelo <link>https://portal.ifma.edu.br/inicio/.
+# Projeto Java/Maven - Algoritmos Busca Em Grafos.
+  Projeto em Java voltado a atender o desafio de uma atividade acadêmica, para implementação dos algoritmos de busca envolvendo grafos referente à disciplina de ```Inteligência Artificial (IA)``` do ```IFMA - Instituto Federal do Maranhão - Campus Monte Castelo``` <link>https://portal.ifma.edu.br/inicio/.
    
  #### Stack do projeto
   - Escrito em Java 8;
