@@ -1,4 +1,4 @@
-
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.profundidade;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
