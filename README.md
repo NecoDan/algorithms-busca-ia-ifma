@@ -40,7 +40,7 @@
      - GitHub: https://github.com/jansx3x
  
  - Lucas de Jesus Sousa - Bachelor in Information Systems, Federal Institute of Maranhão - IFMA.
-     - GitHub: https://github.com/NecoDan
+     - GitHub: https://github.com/lucasdejesussousa
  
  - Johnnata Lima Ferreira - Bachelor in Information Systems, Federal Institute of Maranhão - IFMA.
      - GitHub: https://github.com/johnnatalf
