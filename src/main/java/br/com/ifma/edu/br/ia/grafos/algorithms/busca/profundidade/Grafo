@@ -1,4 +1,4 @@
-package br.com.ifma.edu.br.ia.grafos.algorithms.busca.grafo;
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.graph;
 
 import java.util.Iterator;
 import java.util.LinkedList;
