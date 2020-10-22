@@ -1,4 +1,4 @@
-package br.edu.ifma.ia.grafos.algorithms.grafo;
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo;
 import java.awt.Color;
 import java.util.ArrayList;
 

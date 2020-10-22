@@ -1,5 +1,5 @@
-package br.edu.ifma.ia.grafos.algorithms.busca;
-import br.edu.ifma.ia.grafos.algorithms.grafo.Vertice;
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.busca;
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo.Vertice;
 
 import java.awt.*;
 import java.util.ArrayList;

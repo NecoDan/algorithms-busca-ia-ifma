@@ -1,9 +1,9 @@
-package br.edu.ifma.ia.grafos.algorithms.app;
-import br.edu.ifma.ia.grafos.algorithms.busca.BuscaEmLargura;
-import br.edu.ifma.ia.grafos.algorithms.grafo.Grafo;
-import br.edu.ifma.ia.grafos.algorithms.grafo.Vertice;
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura;
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.busca.BuscaEmLargura;
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo.Grafo;
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo.Vertice;
 
-public class App {
+public class AppLargura {
     public static void main(String[] args) {
         Grafo g = new Grafo();
         Vertice destino;
