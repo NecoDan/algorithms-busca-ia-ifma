@@ -1,34 +1,37 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.busca;
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo.Vertice;
-
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class BuscaEmLargura {
     private Vertice inicial, destino;
     private Stack<Vertice> listaVisitados = new Stack<>();
-    private ArrayList<Vertice> caminho = new ArrayList();
+    private List<Vertice> caminho = new ArrayList<>();
 
     public Vertice busca(Vertice inicial, Vertice destino){
         this.inicial = inicial;
         this.destino = destino;
-
+        //Define o vertice inicial
         this.inicial.setPai(null);
         this.inicial.setDistancia(0);
         listaVisitados.add(this.inicial);
 
         Vertice verticeAtual;
         while(!listaVisitados.isEmpty()){
-            verticeAtual = listaVisitados.pop();
-            caminho.add(verticeAtual);
-            if(this.destino.equals(verticeAtual)){
-                this.imprimeCaminho(caminho);
-                return verticeAtual;
+            verticeAtual = listaVisitados.pop(); //Remove elemento no topo da pilha
+            caminho.add(verticeAtual); //Armazena o caminho
+            //Se chegou no destino
+            if(this.destino.equals(verticeAtual)) {
+                imprimeCaminho(caminho); //Exibe o caminho percorrido
+                return verticeAtual; //Retorna o destino
             }
-            for(int i=0;i<verticeAtual.getVizinhos().size();i++){
-                if(!foiVisitado(verticeAtual.getVizinhos().get(i)) &&
-                        !pesquisaVisitados(listaVisitados,verticeAtual.getVizinhos().get(i))) {
+            //Caso não, percorre os vertices adjacentes
+            for(int i=0; i < verticeAtual.getVizinhos().size(); i++) {
+                if(!foiExpandido(verticeAtual.getVizinhos().get(i)) &&
+                   !foiVisitado(listaVisitados, verticeAtual.getVizinhos().get(i))) {
+
                     verticeAtual.getVizinhos().get(i).setCor(Color.GRAY);
                     verticeAtual.getVizinhos().get(i).setDistancia(verticeAtual.getDistancia() + 1);
                     listaVisitados.add(verticeAtual.getVizinhos().get(i));
@@ -39,14 +42,14 @@ public class BuscaEmLargura {
         return null;
     }
 
-    public boolean foiVisitado(Vertice vertice) {
+    private boolean foiExpandido(Vertice vertice) {
         return (vertice.getCor() == Color.BLACK);
     }
 
-    private boolean pesquisaVisitados(Stack<Vertice> listaVisitados, Vertice vertice) {
-        for (int i=0;i<listaVisitados.size();i++){
-            if(vertice.equals(listaVisitados.get(i))){
-                System.out.println(vertice.getValor());
+    private boolean foiVisitado(Stack<Vertice> listaVisitados, Vertice vertice) {
+        for (Vertice verticeAtual : listaVisitados) {
+            if (vertice.equals(verticeAtual)) {
+                System.out.println("Pesquisa visitado: " + vertice.getValor());
                 return true;
             }
         }
@@ -63,7 +66,7 @@ public class BuscaEmLargura {
         );
     }
     //imprime o caminho em razão da marcação de preto no vertice visitado
-    public void imprimeCaminho(ArrayList<Vertice> c){
+    private void imprimeCaminho(List<Vertice> c){
         for(int i=0;i<c.size();i++){
             System.out.print("("+c.get(i).getValor()+")");
             if(i<caminho.size()-1){

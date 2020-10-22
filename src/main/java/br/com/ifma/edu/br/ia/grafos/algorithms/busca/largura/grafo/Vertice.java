@@ -1,18 +1,24 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Vertice {
-    private Color cor;
-    private int distancia;
-    private Vertice pai;
     private String valor;
-    public ArrayList<Vertice> vizinhos = new ArrayList<>();
+    /**
+     * <b>WHITE</b>: Vértice não visitado e não explorado/expandido<br>
+     * <b>GRAY</b>: Vértice visitado, mas não explorado/expandido<br>
+     * <b>BLACK</b>: Vértice  visitado e explorado/expandido<br>
+     */
+    private Color cor;
+    private Vertice pai;
+    private int distancia;
+    private List<Vertice> vizinhos = new ArrayList<>();
 
-    public void addVizinho(Vertice v){
-        this.vizinhos.add(v);
+    public void addVizinho(Vertice vertice) {
+        this.vizinhos.add(vertice);
     }
-    public ArrayList<Vertice> getVizinhos() {
+    public List<Vertice> getVizinhos() {
         return vizinhos;
     }
     public Color getCor() {
@@ -34,7 +40,7 @@ public class Vertice {
         this.valor = valor;
     }
     public Vertice getPai() {
-        return pai;
+        return this.pai;
     }
     public void setPai(Vertice pai) {
         this.pai = pai;
