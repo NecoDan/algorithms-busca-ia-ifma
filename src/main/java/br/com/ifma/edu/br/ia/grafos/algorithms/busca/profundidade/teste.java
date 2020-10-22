@@ -1,4 +1,4 @@
-package br.com.ifma.edu.br.ia.grafos.algorithms.busca.profundidade.teste;
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.profundidade;
 
 public class Teste {
 
