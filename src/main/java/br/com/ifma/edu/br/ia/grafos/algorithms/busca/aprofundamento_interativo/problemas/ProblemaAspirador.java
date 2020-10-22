@@ -31,8 +31,6 @@ public class ProblemaAspirador implements Problema {
 
     @Override
     public void inicializarAcoes() {
-        // TODO Auto-generated method stub
-
         ESS.nome = "ESS";
         ESS.acoes.add(ELS);
         ESS.acoes.add(DSS);
@@ -76,13 +74,11 @@ public class ProblemaAspirador implements Problema {
 
     @Override
     public LinkedList<Estruturas.Estado> funcaoSucessora(Estruturas.Estado estado) {
-        // TODO Auto-generated method stub
         return estado.acoes;
     }
 
     @Override
     public boolean testeDeObjetivo(Estruturas.Estado estadoAtual) {
-        // TODO Auto-generated method stub
         if (estadoAtual.equals(DLL) || estadoAtual.equals(ELL))
             return true;
         return false;
@@ -90,7 +86,6 @@ public class ProblemaAspirador implements Problema {
 
     @Override
     public Estruturas.Estado verificaEstadoInicial(String nomeEstadoInicial) {
-        // TODO Auto-generated method stub
         for (int i = 0; i < aspirador.size(); i++) {
             if (nomeEstadoInicial.equals(aspirador.get(i).nome))
                 return aspirador.get(i);
@@ -101,31 +96,26 @@ public class ProblemaAspirador implements Problema {
 
     @Override
     public Estruturas.Estado verificaObjetivo(String nomeOjetivo) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public Estruturas.Estado getEstadoInicial() {
-        // TODO Auto-generated method stub
         return this.estadoInicial;
     }
 
     @Override
     public Estruturas.Estado getObejetivo() {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public String getNomeEstadoInicial() {
-        // TODO Auto-generated method stub
         return this.NomeEstadoInicial;
     }
 
     @Override
     public String getNomeObjetivo() {
-        // TODO Auto-generated method stub
         return this.NomeObjetivo;
     }
 }

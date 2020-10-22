@@ -1,4 +1,4 @@
-package Estruturas;
+package br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.estruturas;
 
 import java.util.LinkedList;
 
