@@ -27,7 +27,7 @@
       4. Buildar o projeto e executá-lo.
     
   
- #### Autor e mantenedores do projeto
+ #### Autores e mantenedores do projeto
  - Daniel Santos Gonçalves - Bachelor in Information Systems, Federal Institute of Maranhão - IFMA.
     - GitHub: https://github.com/NecoDan
     - Linkedin: <link>https://www.linkedin.com/in/daniel-santos-bb072321 
