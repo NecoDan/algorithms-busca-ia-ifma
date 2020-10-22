@@ -1,5 +1,7 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.problemas;
 
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.estruturas.Estado;
+
 import java.util.LinkedList;
 
 public class ProblemaMapaRomenia implements Problema {
@@ -8,31 +10,31 @@ public class ProblemaMapaRomenia implements Problema {
     public String NomeEstadoInicial;
     public String NomeObjetivo;
 
-    public Estruturas.Estado estadoInicial;
-    public Estruturas.Estado objetivo;
+    public Estado estadoInicial;
+    public Estado objetivo;
 
-    public Estruturas.Estado Arad = new Estruturas.Estado();
-    public Estruturas.Estado Timissoara = new Estruturas.Estado();
-    public Estruturas.Estado Zerind = new Estruturas.Estado();
-    public Estruturas.Estado Sibiu = new Estruturas.Estado();
-    public Estruturas.Estado Lugoj = new Estruturas.Estado();
-    public Estruturas.Estado Oradea = new Estruturas.Estado();
-    public Estruturas.Estado Fagaras = new Estruturas.Estado();
-    public Estruturas.Estado Rimnieu_Vilcea = new Estruturas.Estado();
-    public Estruturas.Estado Pitesti = new Estruturas.Estado();
-    public Estruturas.Estado Bucareste = new Estruturas.Estado();
-    public Estruturas.Estado Mehadia = new Estruturas.Estado();
-    public Estruturas.Estado Dobreta = new Estruturas.Estado();
-    public Estruturas.Estado Craiova = new Estruturas.Estado();
-    public Estruturas.Estado Giurgiu = new Estruturas.Estado();
-    public Estruturas.Estado Urziceni = new Estruturas.Estado();
-    public Estruturas.Estado Hirsova = new Estruturas.Estado();
-    public Estruturas.Estado Eforie = new Estruturas.Estado();
-    public Estruturas.Estado Vaslui = new Estruturas.Estado();
-    public Estruturas.Estado Iasi = new Estruturas.Estado();
-    public Estruturas.Estado Neamt = new Estruturas.Estado();
+    public Estado Arad = new Estado();
+    public Estado Timissoara = new Estado();
+    public Estado Zerind = new Estado();
+    public Estado Sibiu = new Estado();
+    public Estado Lugoj = new Estado();
+    public Estado Oradea = new Estado();
+    public Estado Fagaras = new Estado();
+    public Estado Rimnieu_Vilcea = new Estado();
+    public Estado Pitesti = new Estado();
+    public Estado Bucareste = new Estado();
+    public Estado Mehadia = new Estado();
+    public Estado Dobreta = new Estado();
+    public Estado Craiova = new Estado();
+    public Estado Giurgiu = new Estado();
+    public Estado Urziceni = new Estado();
+    public Estado Hirsova = new Estado();
+    public Estado Eforie = new Estado();
+    public Estado Vaslui = new Estado();
+    public Estado Iasi = new Estado();
+    public Estado Neamt = new Estado();
 
-    public LinkedList<Estruturas.Estado> romenia = new LinkedList<Estruturas.Estado>();
+    public LinkedList<Estado> romenia = new LinkedList<Estado>();
 
     public ProblemaMapaRomenia(String NomeEstadoInicial, String NomeObjetivo) {
         super();
@@ -160,20 +162,19 @@ public class ProblemaMapaRomenia implements Problema {
     }
 
     @Override
-    public LinkedList<Estruturas.Estado> funcaoSucessora(Estruturas.Estado estado) {
+    public LinkedList<Estado> funcaoSucessora(Estado estado) {
         return estado.acoes;
     }
 
     @Override
-    public boolean testeDeObjetivo(Estruturas.Estado estadoAtual) {
+    public boolean testeDeObjetivo(Estado estadoAtual) {
         if (estadoAtual.equals(this.objetivo))
             return true;
         return false;
     }
 
     @Override
-    public Estruturas.Estado verificaEstadoInicial(String estadoInicial) {
-        // TODO Auto-generated method stub
+    public Estado verificaEstadoInicial(String estadoInicial) {
         for (int i = 0; i < romenia.size(); i++) {
             if (estadoInicial.equals(romenia.get(i).nome)) {
                 return romenia.get(i);
@@ -184,7 +185,7 @@ public class ProblemaMapaRomenia implements Problema {
     }
 
     @Override
-    public Estruturas.Estado verificaObjetivo(String objetivo) {
+    public Estado verificaObjetivo(String objetivo) {
         for (int i = 0; i < romenia.size(); i++) {
             if (objetivo.equals(romenia.get(i).nome)) {
                 return romenia.get(i);
@@ -195,12 +196,12 @@ public class ProblemaMapaRomenia implements Problema {
     }
 
     @Override
-    public Estruturas.Estado getEstadoInicial() {
+    public Estado getEstadoInicial() {
         return this.estadoInicial;
     }
 
     @Override
-    public Estruturas.Estado getObejetivo() {
+    public Estado getObejetivo() {
         return this.objetivo;
     }
 

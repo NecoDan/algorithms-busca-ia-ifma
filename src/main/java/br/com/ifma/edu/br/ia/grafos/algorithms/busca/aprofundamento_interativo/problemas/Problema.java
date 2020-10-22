@@ -1,6 +1,6 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.problemas;
 
-import Estruturas.Estado;
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.estruturas.Estado;
 
 import java.util.LinkedList;
 

@@ -1,5 +1,6 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.problemas;
 
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.aprofundamento_interativo.estruturas.Estado;
 
 import java.util.LinkedList;
 
@@ -8,18 +9,18 @@ public class ProblemaAspirador implements Problema {
     public String NomeEstadoInicial;
     public String NomeObjetivo = "DLL ou ELL";
 
-    public Estruturas.Estado estadoInicial;
+    public Estado estadoInicial;
 
-    public Estruturas.Estado ESS = new Estruturas.Estado();
-    public Estruturas.Estado DSS = new Estruturas.Estado();
-    public Estruturas.Estado ELL = new Estruturas.Estado();
-    public Estruturas.Estado DLL = new Estruturas.Estado();
-    public Estruturas.Estado ESL = new Estruturas.Estado();
-    public Estruturas.Estado DSL = new Estruturas.Estado();
-    public Estruturas.Estado ELS = new Estruturas.Estado();
-    public Estruturas.Estado DLS = new Estruturas.Estado();
+    public Estado ESS = new Estado();
+    public Estado DSS = new Estado();
+    public Estado ELL = new Estado();
+    public Estado DLL = new Estado();
+    public Estado ESL = new Estado();
+    public Estado DSL = new Estado();
+    public Estado ELS = new Estado();
+    public Estado DLS = new Estado();
 
-    public LinkedList<Estruturas.Estado> aspirador = new LinkedList<Estruturas.Estado>();
+    public LinkedList<Estado> aspirador = new LinkedList<Estado>();
 
     public ProblemaAspirador(String nomeEstadoInicial) {
         super();
@@ -73,19 +74,19 @@ public class ProblemaAspirador implements Problema {
     }
 
     @Override
-    public LinkedList<Estruturas.Estado> funcaoSucessora(Estruturas.Estado estado) {
+    public LinkedList<Estado> funcaoSucessora(Estado estado) {
         return estado.acoes;
     }
 
     @Override
-    public boolean testeDeObjetivo(Estruturas.Estado estadoAtual) {
+    public boolean testeDeObjetivo(Estado estadoAtual) {
         if (estadoAtual.equals(DLL) || estadoAtual.equals(ELL))
             return true;
         return false;
     }
 
     @Override
-    public Estruturas.Estado verificaEstadoInicial(String nomeEstadoInicial) {
+    public Estado verificaEstadoInicial(String nomeEstadoInicial) {
         for (int i = 0; i < aspirador.size(); i++) {
             if (nomeEstadoInicial.equals(aspirador.get(i).nome))
                 return aspirador.get(i);
@@ -95,17 +96,17 @@ public class ProblemaAspirador implements Problema {
     }
 
     @Override
-    public Estruturas.Estado verificaObjetivo(String nomeOjetivo) {
+    public Estado verificaObjetivo(String nomeOjetivo) {
         return null;
     }
 
     @Override
-    public Estruturas.Estado getEstadoInicial() {
+    public Estado getEstadoInicial() {
         return this.estadoInicial;
     }
 
     @Override
-    public Estruturas.Estado getObejetivo() {
+    public Estado getObejetivo() {
         return null;
     }
 
