@@ -43,4 +43,4 @@
      - GitHub: https://github.com/NecoDan
  
  - Johnnata Lima Ferreira - Bachelor in Information Systems, Federal Institute of Maranhão - IFMA.
-     - GitHub: 
+     - GitHub: https://github.com/johnnatalf
