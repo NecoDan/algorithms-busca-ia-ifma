@@ -1,5 +1,7 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca;
 
+import br.com.ifma.edu.br.ia.grafos.algorithms.busca.custo_uniforme.AppCustoUniforme;
+
 public class App {
     public static void main(String[] args) {
         System.out.println("Em execução....");
@@ -8,6 +10,7 @@ public class App {
         // AppLargura.executaTesteBuscaEmLargura();
 
         /* Busca Custo Uniforme - Dev Jans*/
+        // AppCustoUniforme.executarTesteBuscaCustoUniforme();
 
         /* Busca Bidirecional - Dev Daniel Santos*/
         // AppBidirecional.executarTesteBuscaBiDirecional();
