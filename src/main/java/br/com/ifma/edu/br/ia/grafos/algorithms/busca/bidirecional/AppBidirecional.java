@@ -1,6 +1,5 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.bidirecional;
 
-<<<<<<< HEAD
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.bidirecional.busca.BuscaBiDirecional;
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.bidirecional.grafo.Grafo;
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.bidirecional.grafo.Vertice;
@@ -72,8 +71,4 @@ public final class AppBidirecional {
             }
         }
     }
-=======
-public class AppBidirecional {
-
->>>>>>> master
 }
