@@ -37,7 +37,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.AppLargura</mainClass>
+                            <mainClass>br.com.ifma.edu.br.ia.grafos.algorithms.busca.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

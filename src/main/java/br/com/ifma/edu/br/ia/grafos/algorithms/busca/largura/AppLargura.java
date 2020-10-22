@@ -1,28 +1,35 @@
 package br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura;
+
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.busca.BuscaEmLargura;
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo.Grafo;
 import br.com.ifma.edu.br.ia.grafos.algorithms.busca.largura.grafo.Vertice;
 
-public class AppLargura {
-    public static void main(String[] args) {
+public final class AppLargura {
+
+    private AppLargura() {
+
+    }
+
+    public static void executaTesteBuscaEmLargura() {
         Grafo g = new Grafo();
         Vertice destino;
+
 /*** TESTE BUSCA EM LARGURA ***/
-    //cria os vertices
+        //cria os vertices
         Vertice vA = new Vertice();
         Vertice vB = new Vertice();
         Vertice vC = new Vertice();
         Vertice vD = new Vertice();
         Vertice vE = new Vertice();
-    //adiciona vertices no grafo
+        //adiciona vertices no grafo
         g.addVertice(vA);
         g.addVertice(vB);
         g.addVertice(vC);
         g.addVertice(vD);
         g.addVertice(vE);
-    //inicializar atributos de vertices
+        //inicializar atributos de vertices
         g.iniciaVertices();
-    //Preenche os atributos nome e vizinhos dos vertices
+        //Preenche os atributos nome e vizinhos dos vertices
         vA.setValor("A");
         vA.setDistancia(1);
 
@@ -39,7 +46,7 @@ public class AppLargura {
 
         vA.addVizinho(vB);
         vA.addVizinho(vC); //   B
-                           //  /|\
+        //  /|\
         vB.addVizinho(vA); // A | D
         vB.addVizinho(vC); //  \|/ \
         vB.addVizinho(vD); //   C---E
